@@ -1,18 +1,18 @@
 package mycompany.olga.tests;
 
-import com.codeborne.selenide.Configuration;
 import mycompany.olga.pages.RegistrationPage;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-@DisplayName("Это страница Practice Form (v.5)")
+import static mycompany.olga.utils.RandomUtils.getRandomString;
 
-public class RegistrationFormWithTestBaseTests extends TestBase {
+@DisplayName("Это страница Practice Form (v.7)")
+
+public class RegistrationFormsWithRandomUntilsTests extends TestBase {
 
     RegistrationPage registrationPage = new RegistrationPage();
-    String firstName = "Olga";
-    String lastName = "Kos";
+    String firstName = getRandomString(10);
+    String lastName = getRandomString(10);
     String userEmail = "test@test.ru";
     String gender = "Female";
     String userNumber = "8125560781";
@@ -26,8 +26,6 @@ public class RegistrationFormWithTestBaseTests extends TestBase {
     String address = "Moskovskoe 1";
     String state = "Haryana";
     String city = "Panipat";
-
-
 
     @Test
     void studentRegistrationFormTests() {
@@ -58,7 +56,7 @@ public class RegistrationFormWithTestBaseTests extends TestBase {
                 //.checkForm("Subjects", "English, History")
                 .checkForm("Subjects", subjectsEnglish + ", " + subjectsHistory)
                 .checkForm("Hobbies", hobbyReading)
-                //.checkForm("Picture", fileName) // не работае, если картинка в паке img/
+                //.checkForm("Picture", fileName) // не работает, если картинка в паке img/
                 .checkForm("Picture", "selenide.png")
                 .checkForm("Address", address)
                 .checkForm("State and City", state + " " + city)
