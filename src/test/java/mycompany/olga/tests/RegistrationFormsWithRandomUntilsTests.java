@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static mycompany.olga.utils.RandomUtils.getRandomString;
 
-@DisplayName("Это страница Practice Form (v.7)")
+@DisplayName("Это страница Practice Form (v.6)")
 
 public class RegistrationFormsWithRandomUntilsTests extends TestBase {
 

@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static mycompany.olga.tests.TestData.*;
 
-@DisplayName("Это страница Practice Form (v.5)")
+@DisplayName("Это страница Practice Form (v.6)")
 
 public class RegistrationFormWithTestDataTests extends TestBase {
 
